@@ -2,9 +2,9 @@
   "name": "big_data",
   "version": "1.0.0",
   "description": "SETUP API CALLS and FILE TRANSFER",
-  "main": "main.js",
+  "main": "main.ts",
   "scripts": {
-    "run": "node main.js"
+    "run": "node main.ts"
   },
   "repository": {
     "type": "git",

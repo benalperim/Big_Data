@@ -1,2 +1,2 @@
-import imdb = require('imdb-api')
+const imdb = require('imdb-api')
 const googleTrends = require('google-trends-api')
