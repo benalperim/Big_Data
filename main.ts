@@ -40,7 +40,7 @@ lib.create = function(file , data , callback ){
 					});
 				} else{
 					callback('Error writing the file');
-				}-+
+				}
 			});
 		} else {
 			callback('Could not create new file, it may already exist');
