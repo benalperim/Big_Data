@@ -27,16 +27,17 @@ console.log(MovieData.length)//Should come out as 315 and it does
 const apiCalls =async function(MovieData , outputData, callback){
 	
 	// do async calls for multiple data retrivals
-	for(let  i = 0; i < MovieData.length; i++){
+	for(let  i = 0; i < 2; i++){
 		try{
 		//get the api call back
 		let payload =  await cli.get({'name': MovieData[i]})
-		console.log(payload.title)
+		
 		//get the actor director prod and genre fields from payload
-		outputData += payload.actors + " (actors) " + payload.director + " (directors) " + payload.production + " (Prod) " + payload.genre + " (Genres ) \n"
+		outputData = payload.actors + " (actors) " + payload.director + " (directors) " + payload.production + " (Prod) " + payload.genres + " (Genres ) \n"
+		console.log(outputData)
 		}catch(err) {
 			console.log(MovieData[i] + " could not return anything")
-			callback("bad movie")
+			//callback("bad movie")
 		}
 	}
 	return outputData
