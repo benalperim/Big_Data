@@ -20,22 +20,22 @@ const trendData = async function(readData , outputData){
         let keyArray = readData[i].split(',' , 5)
         let timeFrame  =readData[i].split(',' , 6)
         let startTime = new Date(timeFrame[5].split('-')[0])
-       
+        let endTime = new Date(timeFrame[5].split('-')[1])
         console.log(keyArray)
         console.log(startTime)
-        // googleTrends
-        //     .interestOverTime({
-        //         keyword: keyArray,
-        //         startTime,
-        //         endTime,
-        //         geo: 'US',
-        //         granularTimeResolution: true
-        //     })
-        //     .then((res) => {
-        //         console.log(res);
-        //     })
-        //     .catch((err) => {
-        //         console.log(err);
-        //     });
+        googleTrends
+            .interestOverTime({
+                keyword: keyArray,
+                startTime,
+                endTime,
+                geo: 'US',
+                //granularTimeResolution: true
+            })
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     }
 }(readData)
