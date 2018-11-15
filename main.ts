@@ -27,7 +27,7 @@ console.log(MovieData.length)//Should come out as 315 and it does
 const apiCalls =async function(MovieData , outputData, callback){
 	
 	// do async calls for multiple data retrivals
-	for(let  i = 0; i < 2; i++){
+	for(let  i = 0; i < MovieData.length; i++){
 		try{
 		//get the api call back
 		let payload =  await cli.get({'name': MovieData[i]})
