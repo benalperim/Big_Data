@@ -13,7 +13,7 @@ console.log(readData.length);//Should come out as  1567 and it does
 
 const trendData = async function(readData , outputData){
 
-    for(let  i =0; i < 2; i++){
+    for(let  i =0; i < readData.length; i++){
 
 
 
@@ -21,20 +21,20 @@ const trendData = async function(readData , outputData){
         let timeFrame  =readData[i].split(',' , 6)
         let startTime = new Date(timeFrame[5].split('-')[0])
         let endTime = new Date(timeFrame[5].split('-')[1])
-        console.log(keyArray)
-        console.log(startTime)
-        googleTrends
+        //console.log(keyArray)
+        //console.log(startTime)
+        let payload = await googleTrends
             .interestOverTime({
                 keyword: keyArray,
                 startTime,
                 endTime,
                 geo: 'US',
                 //granularTimeResolution: true
-            })
-            .then((res) => {
-                console.log(res);
-            })
-            .catch((err) => {
+            }).then((payload) => {
+                //console.log(res)
+                console.log(payload.split("averages\":")[1])
+                
+            }).catch((err) => {
                 console.log(err);
             });
     }
