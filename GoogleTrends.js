@@ -38,4 +38,4 @@ const trendData = async function(readData , outputData){
                 console.log(err);
             });
     }
-}(readData)
+}

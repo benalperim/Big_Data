@@ -68,7 +68,7 @@ helper.delete = function(filename, callback){
 
 
 //Update a file 
-lib.update = function( file , data , callback){
+helper.update = function( file , data , callback){
 	fs.open(helper.baseDir + '/' + file + '.csv' , 'r+' , (err, fileDescriptor)=>{
 		if(!err && fileDescriptor){
 			//convert to string
