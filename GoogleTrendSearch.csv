@@ -359,8 +359,8 @@ Dunkirk,Fionn Whitehead,Damien Bonnard,Christopher Nolan,Warner Bros. Pictures,1
 Dunkirk,Fionn Whitehead,Damien Bonnard,Christopher Nolan,Warner Bros. Pictures,12/08/2017-12/14/2017,0.001059
 Elle,Isabelle Huppert,Laurent Lafitte,Paul Verhoeven,SBS Productions,01/13/2017-01/19/2017,0.001876
 Elle,Isabelle Huppert,Laurent Lafitte,Paul Verhoeven,SBS Productions,01/27/2017-02/02/2017,0.001023
-Everybody Loves Somebody,,,,,02/17/2017-02/23/2017,0.005724
-Everybody Loves Somebody,,,,,02/24/2017-03/02/2017,0.002939
+Everybody Loves Somebody,Karla Souza,José María Yazpik,Catalina Aguilar Mastretta,Draco Films,02/17/2017-02/23/2017,0.005724
+Everybody Loves Somebody,Karla Souza,José María Yazpik,Catalina Aguilar Mastretta,Draco Films,02/24/2017-03/02/2017,0.002939
 "Everything, Everything",Amandla Stenberg,Nick Robinson,Stella Meghie,Warner Bros. Pictures,05/19/2017-05/25/2017,0.088509
 "Everything, Everything",Amandla Stenberg,Nick Robinson,Stella Meghie,Warner Bros. Pictures,05/26/2017-06/01/2017,0.044052
 "Everything, Everything",Amandla Stenberg,Nick Robinson,Stella Meghie,Warner Bros. Pictures,06/02/2017-06/08/2017,0.019151
@@ -873,7 +873,7 @@ Norman,Richard Gere,Lior Ashkenazi,Joseph Cedar,Sony Pictures Classics,05/26/201
 Norman,Richard Gere,Lior Ashkenazi,Joseph Cedar,Sony Pictures Classics,06/02/2017-06/08/2017,0.001085
 Office Christmas Party,Jason Bateman,Olivia Munn,Josh Gordon,Paramount Pictures,01/06/2017-01/12/2017,0.006380
 Ok Jaanu,Shraddha Kapoor,Naseeruddin Shah,Shaad Ali,Madras Talkies,01/13/2017-01/19/2017,0.001421
-Once Upon A Time,Lana Parrilla,Robert Carlyle,Xiaoding Zhao,"Alibaba Pictures Group,",08/11/2017-08/17/2017,0.002067
+Once Upon A Time,Lana Parrilla,Robert Carlyle,Xiaoding Zhao,Alibaba Pictures Group,08/11/2017-08/17/2017,0.002067
 One Piece Film: Gold,Mayumi Tanaka,Kazuya Nakai,Hiroaki Miyamoto,Bandai Namco Entertainment,01/06/2017-01/12/2017,0.001532
 Only The Brave,Josh Brolin,Miles Teller,Joseph Kosinski,Columbia Pictures,10/20/2017-10/26/2017,0.066572
 Only The Brave,Josh Brolin,Miles Teller,Joseph Kosinski,Columbia Pictures,10/27/2017-11/02/2017,0.044683
@@ -991,11 +991,11 @@ Same Kind of Different as Me,Greg Kinnear,Renée Zellweger,Michael Carney,Paramo
 Same Kind of Different as Me,Greg Kinnear,Renée Zellweger,Michael Carney,Paramount Pictures,11/10/2017-11/16/2017,0.001361
 Sarkar 3,Amitabh Bachchan,Abhishek Bachchan,Ram Gopal Varma,AB Corp Ltd.,05/12/2017-05/18/2017,0.001215
 Shubh Mangal Saavdhan,Ayushmann Khurrana,Bhumi Pednekar,R.S. Prasanna,Colour Yellow Productions,09/01/2017-09/07/2017,0.003406
-Silence (2016),Andrew Garfield,Adam Driver,Martin Scorsese,"Cappa Defina Productions,",01/06/2017-01/12/2017,0.003657
-Silence (2016),Andrew Garfield,Adam Driver,Martin Scorsese,"Cappa Defina Productions,",01/13/2017-01/19/2017,0.013329
-Silence (2016),Andrew Garfield,Adam Driver,Martin Scorsese,"Cappa Defina Productions,",01/20/2017-01/26/2017,0.009205
-Silence (2016),Andrew Garfield,Adam Driver,Martin Scorsese,"Cappa Defina Productions,",01/27/2017-02/02/2017,0.004571
-Silence (2016),Andrew Garfield,Adam Driver,Martin Scorsese,"Cappa Defina Productions,",02/03/2017-02/09/2017,0.002112
+Silence (2016),Andrew Garfield,Adam Driver,Martin Scorsese,Cappa Defina Productions,01/06/2017-01/12/2017,0.003657
+Silence (2016),Andrew Garfield,Adam Driver,Martin Scorsese,Cappa Defina Productions,01/13/2017-01/19/2017,0.013329
+Silence (2016),Andrew Garfield,Adam Driver,Martin Scorsese,Cappa Defina Productions,01/20/2017-01/26/2017,0.009205
+Silence (2016),Andrew Garfield,Adam Driver,Martin Scorsese,Cappa Defina Productions,01/27/2017-02/02/2017,0.004571
+Silence (2016),Andrew Garfield,Adam Driver,Martin Scorsese,Cappa Defina Productions,02/03/2017-02/09/2017,0.002112
 Sing,Matthew McConaughey,Reese Witherspoon,Garth Jennings,Illumination Entertainment,01/06/2017-01/12/2017,0.132841
 Sing,Matthew McConaughey,Reese Witherspoon,Garth Jennings,Illumination Entertainment,01/13/2017-01/19/2017,0.096146
 Sing,Matthew McConaughey,Reese Witherspoon,Garth Jennings,Illumination Entertainment,01/20/2017-01/26/2017,0.056014
@@ -1412,9 +1412,9 @@ Til Death Do Us Part,Bianca Bethune,Stephen Bishop,Chris Stokes,Novus Content,09
 Til Death Do Us Part,Bianca Bethune,Stephen Bishop,Chris Stokes,Novus Content,10/06/2017-10/12/2017,0.006838
 Til Death Do Us Part,Bianca Bethune,Stephen Bishop,Chris Stokes,Novus Content,10/13/2017-10/19/2017,0.002798
 Titanic [Rerelease],Leonardo DiCaprio,Kate Winslet,James Cameron,20th Century Fox,12/01/2017-12/07/2017,0.004204
-Toilet: Ek Prem Katha,Akshay Kumar,Bhumi Pednekar,Shree Narayan Singh,"Plan C Studios,",08/11/2017-08/17/2017,0.005716
-Toilet: Ek Prem Katha,Akshay Kumar,Bhumi Pednekar,Shree Narayan Singh,"Plan C Studios,",08/18/2017-08/24/2017,0.003952
-Toilet: Ek Prem Katha,Akshay Kumar,Bhumi Pednekar,Shree Narayan Singh,"Plan C Studios,",08/25/2017-08/31/2017,0.001856
+Toilet: Ek Prem Katha,Akshay Kumar,Bhumi Pednekar,Shree Narayan Singh,Plan C Studios,08/11/2017-08/17/2017,0.005716
+Toilet: Ek Prem Katha,Akshay Kumar,Bhumi Pednekar,Shree Narayan Singh,Plan C Studios,08/18/2017-08/24/2017,0.003952
+Toilet: Ek Prem Katha,Akshay Kumar,Bhumi Pednekar,Shree Narayan Singh,Plan C Studios,08/25/2017-08/31/2017,0.001856
 Tommy's Honour,Peter Mullan,Sam Neill,Jason Connery,Roadside Attractions,04/14/2017-04/20/2017,0.001451
 Tomorrow,Anthony Barnosky,Olivier De Schutter,Cyril Dion,Mars Films,05/12/2017-05/18/2017,0.000000
 Toni Erdmann,Sandra Hüller,Peter Simonischek,Maren Ade,Sony Pictures Classics,02/03/2017-02/09/2017,0.001005
