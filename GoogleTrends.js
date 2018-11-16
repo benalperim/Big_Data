@@ -17,10 +17,11 @@ const trendData = async function(readData , outputData){
 
 
 
-        let keyArray = readData[2].split(',' , 5)
-        let timeFrame  =readData[2].split(',' , 6)
-        let startTime = new Date(timeFrame[5].split('-')[0])
-        let endTime = new Date(timeFrame[5].split('-')[1])
+        let keyArray = readData[i].split(',' , 5)
+        let Data  =readData[i].split(',')
+        let startTime = new Date(Data[5].split('-')[0])
+        let endTime = new Date(Data[5].split('-')[1])
+        let Identifier = Data[6]
         //console.log(keyArray)
         //console.log(startTime)
         let payload = await googleTrends
@@ -31,11 +32,21 @@ const trendData = async function(readData , outputData){
                 geo: 'US',
                 //granularTimeResolution: true
             }).then((payload) => {
-                //console.log(res)
-                console.log(payload.split("averages\":")[1])
+                //outputData += payload.split("averages\":")[1] + "\n"
+
+                console.log(payload.split("averages\":")[1] + ", " + Identifier)
                 
             }).catch((err) => {
                 console.log(err);
             });
     }
-}
+}(readData , outputData)
+
+let callbak = function(err){
+    if (err)
+     console.log(err) 
+ } 
+// let test1 = "muahahahah\n"readData
+ helper.update('TrendsOutput',  outputData, callbak )
+//  let test2 = "hoep this freaking works "
+//  helper.update('TrendsOutput',  test2,callbak )

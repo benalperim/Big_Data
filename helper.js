@@ -76,8 +76,7 @@ helper.update = function( file , data , callback){
 			//truncate
 			fs.truncate(fileDescriptor , (err)=>{
 				if(!err){
-					//Write to File
-					fs.writeFile(fileDescriptor ,  stringData , (err)=>{
+					fs.writeFileSync(fileDescriptor ,  stringData , (err)=>{
 						if(!err){
 							//close the file
 							fs.close(fileDescriptor , (err) =>{
