@@ -67,6 +67,45 @@ helper.delete = function(filename, callback){
 }
 
 
+//Update a file 
+lib.update = function( file , data , callback){
+	fs.open(helper.baseDir + '/' + file + '.csv' , 'r+' , (err, fileDescriptor)=>{
+		if(!err && fileDescriptor){
+			//convert to string
+			var stringData = data
+			//truncate
+			fs.truncate(fileDescriptor , (err)=>{
+				if(!err){
+					//Write to File
+					fs.writeFile(fileDescriptor ,  stringData , (err)=>{
+						if(!err){
+							//close the file
+							fs.close(fileDescriptor , (err) =>{
+								if(!err){
+									callback(false);
+								} else{
+									callback('there was an error closing the file');
+								}
+							});
+						} else{
+							callback('Error Writing to file');
+						}
+					});
+
+				} else{
+					callback('Error truncating file');
+				}
+			});
+
+		} else{
+			callback('Could not open the file for updataing may not exist');
+		}
+
+	});
+
+}
+
+
 
 //adds modularity for possible future use
 module.exports = helper;
