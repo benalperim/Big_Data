@@ -46,43 +46,53 @@ class PrintDot(keras.callbacks.Callback):
 
 
 if __name__ == "__main__":
-	df = pandas.read_csv('GoogleTrendResults2017.csv',
+	data_2017 = pandas.read_csv('GoogleTrendResults2017.csv',
 						 names=['Title', 'Actor1', 'Actor2', 'Director', 'Studio', 'Share'])
 
-	trainData, testData = train_test_split(df, test_size=0.2)
+	data_2018 = pandas.read_csv('GoogelTrendResults2018.csv',
+						 names=['Title', 'Actor1', 'Actor2', 'Director', 'Studio', 'Share'])
+
+	trainData2017, testData2017 = train_test_split(data_2017, test_size=0.2)
+	trainData2018, testData2018 = train_test_split(data_2018, test_size=0.2)
 
 	# Define Inputs and Outputs to NN - Feature=input, label=output
-	trainLabels = trainData.as_matrix(columns=['Share'])
-	trainData = trainData.as_matrix(columns=['Title', 'Actor1', 'Actor2', 'Director', 'Studio'])
-	testLabels = testData.as_matrix(columns=['Share'])
-	testData = testData.as_matrix(columns=['Title', 'Actor1', 'Actor2', 'Director', 'Studio'])
+	trainLabels2017 = trainData2017.as_matrix(columns=['Share'])
+	trainData2017 = trainData2017.as_matrix(columns=['Title', 'Actor1', 'Actor2', 'Director', 'Studio'])
+	testLabels2017 = testData2017.as_matrix(columns=['Share'])
+	testData2017 = testData2017.as_matrix(columns=['Title', 'Actor1', 'Actor2', 'Director', 'Studio'])
+	np.random.shuffle(trainData2017)
 
-	#Generic Shuffle
-	np.random.shuffle(trainData)
+	trainLabels2018 = trainData2018.as_matrix(columns=['Share'])
+	trainData2018 = trainData2018.as_matrix(columns=['Title', 'Actor1', 'Actor2', 'Director', 'Studio'])
+	testLabels2018 = testData2018.as_matrix(columns=['Share'])
+	testData2018 = testData2018.as_matrix(columns=['Title', 'Actor1', 'Actor2', 'Director', 'Studio'])
+	np.random.shuffle(trainData2018)
 
-	#NN Model
-	model = build_model(trainData)
+	#Neural Network based on 2017 Data
+	model = build_model(trainData2017)
 
-	#Saved to a file
-	model.save_weights('./mahWeights')
+	#Saved to a file (Once)
+	#model.save_weights('./mahWeights')
 
 	#Training Model
-	history = model.fit(trainData, trainLabels, epochs=1000, validation_split=0.2,
+	history = model.fit(trainData2017, trainLabels2017, epochs=1000, validation_split=0.2,
 						verbose=0, callbacks=[PrintDot()])
 
 	#Check performance
-	[loss, mae] = model.evaluate(testData, testLabels, verbose=0)
-	print("\nTesting set Mean Abs Error: ", mae)
-
-	plot_history(history)
+	#[loss, mae] = model.evaluate(testData, testLabels, verbose=0)
+	#print("\nTesting set Mean Abs Error: ", mae)
+	#plot_history(history)
 
 	#Test Predictions
-	testPredictions = model.predict(testData)
+	testPredictions2017 = model.predict(testData2017)
+	testPredictions2018 = model.predict(testData2018)
 
-	#Error Difference
-	error = testPredictions - testLabels
-	plt.hist(error)
-	plt.xlabel("Prediction Error")
-	_ = plt.ylabel("Count")
+	#Error Difference Check
+	error2017 = testPredictions2017 - testLabels2017
+	#plt.hist(error2017)
+	#plt.xlabel("Prediction Error")
+	#_ = plt.ylabel("Count")
 
-	plt.show()
+	#Predict 2018 shares
+	error2018 = testPredictions2018 - testData2018
+	# plt.show()
